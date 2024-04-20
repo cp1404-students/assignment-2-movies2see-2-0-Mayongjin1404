@@ -2,7 +2,7 @@
 Name:Ma Yongjin
 Date:04.20.2024
 Brief Project Description:need to integrate various components including loading and saving movies, displaying them, and handling user interactions
-GitHub URL:
+GitHub URL:https://github.com/cp1404-students/assignment-2-movies2see-2-0-Mayongjin1404
 """
 # TODO: Create your main program in this file, using the Movies2SeeApp class
 
