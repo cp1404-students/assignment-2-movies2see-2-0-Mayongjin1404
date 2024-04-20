@@ -1,2 +1,10 @@
 # TODO: Create your Kivy layout in the kv language here
+
 BoxLayout:
+    orientation: 'vertical'
+    Button:
+        text: 'Load Movies'
+        on_press: app.load_movies()
+    Button:
+        text: 'Save Movies'
+        on_press: app.save_movies()
