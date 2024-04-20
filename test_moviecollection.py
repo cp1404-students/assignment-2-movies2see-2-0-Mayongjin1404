@@ -10,28 +10,40 @@ def run_tests():
     print("Test empty MovieCollection:")
     movie_collection = MovieCollection()
     print(movie_collection)
-    assert not movie_collection.movies  # An empty list is considered False
+    assert not movie_collection.movies, 
 
     # Test loading movies
-    print("Test loading movies:")
-    movie_collection.load_movies("movies.json")
+    print("\nTest loading movies:")
+    movie_collection.load_movies("movies.json")  
     print(movie_collection)
-    assert movie_collection.movies  # Assuming file is non-empty; non-empty list is considered True
+    assert movie_collection.movies, "Movies should be loaded"
 
     # Test adding a new Movie with values
-    print("Test adding new movie:")
-    movie_collection.add_movie(Movie("Amazing Grace", 2006, "Drama", False))
+    print("\nTest adding new movie:")
+    new_movie = Movie("Amazing Grace", 2006, "Drama", False)
+    movie_collection.add_movie(new_movie)
+    assert new_movie in movie_collection.movies, 
     print(movie_collection)
 
-    # Test sorting movies
-    print("Test sorting - year:")
-    movie_collection.sort("year")
+    # Test sorting movies by year
+    print("\nTest sorting - year:")
+    movie_collection.sort_movies('year')  
+    if len(movie_collection.movies) > 1:
+        assert movie_collection.movies[0].year <= movie_collection.movies[1].year, 
     print(movie_collection)
-    # TODO: Add more sorting tests
 
-    # TODO: Test saving movies (check file manually to see results)
+    # Test sorting movies by title
+    print("\nTest sorting - title:")
+    movie_collection.sort_movies('title')
+    if len(movie_collection.movies) > 1:
+        assert movie_collection.movies[0].title <= movie_collection.movies[1].title, 
+    print(movie_collection)
 
-    # TODO: Add more tests, as appropriate, for each method
+    # Test saving movies
+    print("\nTest saving movies:")
+    movie_collection.save_movies("movies_test_output.json")  
+    print("Movies saved to 'movies_test_output.json'. Please check this file manually.")
 
+if __name__ == '__main__':
+    run_tests()
 
-run_tests()
