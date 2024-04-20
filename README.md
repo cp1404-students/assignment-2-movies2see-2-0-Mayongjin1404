@@ -7,10 +7,10 @@ A Python project with GUI and Console programs that (re)use classes to manage a 
 ## 1. How long did the entire project (assignment 2) take you?
 
 Estimate:
-I estimated that the project would take around 20 hours to complete, considering the need to learn aspects of Kivy for the GUI, integrate classes, and write tests.
+I estimated that the project would take around 5 hours to complete, considering the need to learn aspects of Kivy for the GUI, integrate classes, and write tests.
 
 Actual:
-The project actually took me about 25 hours to complete. The additional time primarily came from debugging the GUI interactions and ensuring data integrity when loading and saving movies.
+The project actually took me about 9 hours to complete. The additional time primarily came from debugging the GUI interactions and ensuring data integrity when loading and saving movies.
 
 ...
 
